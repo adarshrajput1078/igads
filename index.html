@@ -42,7 +42,7 @@
             height: 220px;
             border-radius: 50%;
             object-fit: cover;
-            border: 8px solid #ffea00; /* Yellow border */
+            border: 8px solid #ffea00;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
             margin-bottom: 20px;
         }
@@ -71,8 +71,8 @@
             justify-content: center;
             width: 90%;
             max-width: 400px;
-            border: 4px dashed #ffea00; /* Dashed Yellow Line */
-            outline: 4px solid #0088cc; /* Blue wrapper to match image */
+            border: 4px dashed #ffea00;
+            outline: 4px solid #0088cc;
             outline-offset: -1px;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
             transition: transform 0.2s;
@@ -103,8 +103,8 @@
             justify-content: center;
             align-items: center;
             gap: 15px;
-            color: #cc0000; /* Dark Red */
-            font-family: 'Times New Roman', Times, serif; /* Match image style */
+            color: #cc0000; 
+            font-family: 'Times New Roman', Times, serif; 
         }
         .time-block {
             display: flex;
@@ -138,7 +138,7 @@
 
     <img src="logo.png" alt="Profile" class="profile-pic">
 
-    <h1>KEVIN BHAI 💸</h1>
+    <h1>ROCKY BHAI 💸</h1>
 
     <a href="https://t.me/+t5XqpSQN0IplMWQ9" class="telegram-btn" onclick="trackPixelAndGo()">
         <svg class="icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.19-.08-.05-.19-.02-.27 0-.12.03-1.98 1.25-5.58 3.68-.52.36-.99.53-1.42.52-.47-.01-1.37-.26-2.03-.48-.82-.27-1.47-.42-1.42-.88.03-.24.29-.48.79-.74 3.08-1.34 5.15-2.23 6.19-2.66 2.95-1.23 3.56-1.45 3.96-1.46.09 0 .28.02.39.11.09.08.12.18.13.27-.01.05-.01.12-.02.16z"/></svg>
@@ -146,7 +146,7 @@
         <svg class="icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.19-.08-.05-.19-.02-.27 0-.12.03-1.98 1.25-5.58 3.68-.52.36-.99.53-1.42.52-.47-.01-1.37-.26-2.03-.48-.82-.27-1.47-.42-1.42-.88.03-.24.29-.48.79-.74 3.08-1.34 5.15-2.23 6.19-2.66 2.95-1.23 3.56-1.45 3.96-1.46.09 0 .28.02.39.11.09.08.12.18.13.27-.01.05-.01.12-.02.16z"/></svg>
     </a>
 
-    <div class="click-here">👆🏼 Click here👆🏼</div>
+    <div class="click-here">👇 Click here 👇</div>
 
     <div class="timer-container">
         <div class="time-block">
@@ -170,23 +170,23 @@
         </div>
     </div>
 
-    <div class="promo-text">UNDER 4 LEVEL WINNING 💸</div>
+    <div class="promo-text">Din Mein 3 Baar FREE Number!</div>
 
     <script>
-        // 👇 APNA TELEGRAM LINK YAHAN BHI DAALEIN 👇
+        // Telegram Link Updated Here
         const TELEGRAM_LINK = "https://t.me/+t5XqpSQN0IplMWQ9"; 
 
         let timeLeft = 25;
         const timerDisplay = document.getElementById('seconds');
 
-        // Facebook Pixel Click Track
+        // Facebook Pixel Event Tracking (Fires 'Lead' event on click or auto-redirect)
         function trackPixelAndGo() {
             if (typeof fbq !== 'undefined') {
                 fbq('track', 'Lead'); 
             }
         }
 
-        // Timer Logic
+        // Timer and Auto Redirect Logic
         const countdownInterval = setInterval(() => {
             timeLeft--;
             
@@ -196,7 +196,7 @@
 
             if (timeLeft <= 0) {
                 clearInterval(countdownInterval);
-                trackPixelAndGo(); 
+                trackPixelAndGo(); // Track pixel before redirecting
                 window.location.href = TELEGRAM_LINK; // Redirect on 0
             }
         }, 1000);
